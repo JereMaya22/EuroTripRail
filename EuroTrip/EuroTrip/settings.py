@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-$mx+8c!-0u5+jah=a#r!u7-amrgr(g-gc6)jr^d+_2*p9w4s19
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['*', '.railway.app']
+ALLOWED_HOSTS = ['*', '.up.railway.app']
 
 # Application definition
 
@@ -107,8 +107,7 @@ STATICFILES_DIRS = [
 ]
 
 # Configuración de seguridad recomendada
-CSRF_TRUSTED_ORIGINS = ['https://*.railway.app',
-                        'http://0.0.0.0:8080',
+CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app',
                         'https://*.paypal.com',
                         ]
 
