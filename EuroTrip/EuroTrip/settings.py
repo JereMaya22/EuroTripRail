@@ -25,11 +25,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Apps.Usuarios',
-    'flights',  # Asegúrate de incluir la aplicación flights
+    'flights', 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -43,7 +44,7 @@ ROOT_URLCONF = 'EuroTrip.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'flights' / 'templates'],  # Asegúrate de que la ruta a tus plantillas sea correcta
+        'DIRS': [BASE_DIR / 'flights' / 'templates' / 'static' / 'usuarios'], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
